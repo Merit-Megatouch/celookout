@@ -1,0 +1,45 @@
+# Symbols no library, runtime or megatouch-host provides (2026-10-07)
+# megatouch-host loads the game with RTLD_NOW, so each of these must be defined
+# (usually in src/host/loader_services.cpp) before the game will start.
+# symbol | needed by
+RankFunc | celookout.so
+ScreenIsTouched() | celookout.so
+QueFlush(bool) | celookout.so
+VideoClass::Line(int, int, int, int) | celookout.so
+VideoClass::GetPixel(int, int) | celookout.so
+VideoClass::SetPixel(unsigned short, unsigned short, int, int, int) | celookout.so
+xml_gameinfo::enum_GameIds_tag(xml_gameinfo::GameIds, bool) | libcontent.so
+ChainRestClass::GetPicFileName(xml_gameinfo::GameIds, int) | celookout.so
+xml_gamerandom::PICRAND_record::PICRAND_record() | celookout.so
+xml_gamerandom::PICRAND_record::~PICRAND_record() | celookout.so
+xml_gamerandom::PICRAND_record::operator=(xml_gamerandom::PICRAND_record const&) | celookout.so
+RandomizedArrayClass::SetBookMark(unsigned char) | celookout.so
+RandomizedArrayClass::GetNextValue(int) | celookout.so
+RandomizedArrayClass::GotoBookMark(unsigned char) | celookout.so
+RandomizedArrayClass::RandomizedArrayClass(xml_gamerandom::PICRAND_record*, int, unsigned char, unsigned short*) | celookout.so
+RandomizedArrayClass::~RandomizedArrayClass() | celookout.so
+USBIO::ReadJoystick(short*, short*, unsigned char*, short, short, unsigned char*) | celookout.so
+USBIO::JoystickFound() | celookout.so
+Bitmap::CopyFromScreen(int, int, bool) | celookout.so
+Bitmap::CreateSmackTextBox(char const*, FontBase*, signed char, unsigned short, unsigned short, bool) | celookout.so
+Bitmap::CreateColoredTextBoxTTFS(char const*, int, int, int, int, int, int, int, int, int, bool, char*, int) | celookout.so
+Bitmap::LoadJPEG(char*, int, int, unsigned char) | celookout.so
+Settings::Init() | celookout.so
+Settings::Init() | libcontent.so
+Settings::Load() | celookout.so
+Settings::Load() | libcontent.so
+Settings::Cleanup() | celookout.so
+Settings::Cleanup() | libcontent.so
+Settings::Restore(abstract_xml_record const*) | celookout.so
+Settings::Restore(abstract_xml_record const*) | libcontent.so
+Settings::SaveNow() | libcontent.so
+Settings::Settings(char const*, unsigned int) | celookout.so
+Settings::Settings(char const*, unsigned int) | libcontent.so
+Settings::~Settings() | celookout.so
+Settings::~Settings() | libcontent.so
+xml_gamerandom::PICRAND_record::operator!=(xml_gamerandom::PICRAND_record const&) const | celookout.so
+Settings::Key(unsigned int, bool) const | celookout.so
+Settings::Key(unsigned int, bool) const | libcontent.so
+typeinfo for Settings | celookout.so
+typeinfo for Settings | libcontent.so
+typeinfo for xml_gamerandom::PICRAND_record | celookout.so
